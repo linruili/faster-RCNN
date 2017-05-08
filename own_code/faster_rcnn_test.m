@@ -12,7 +12,6 @@ result_dir = fullfile(testcase_dir, 'rcnn_result');
 sub_result_dir = sprintf('%s/%d', result_dir, rcnn_counter);
 
 im_name = sprintf('%03d.jpg',  rcnn_counter);
-fprintf('rcnn_counter = %d\n', rcnn_counter); 
 
 if ~exist(sub_result_dir,'dir')
     mkdir(sub_result_dir);
