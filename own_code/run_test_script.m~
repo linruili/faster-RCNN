@@ -1,0 +1,17 @@
+close all;
+clear;
+clc;
+
+
+%run('/home/HAVIL/faster_rcnn/own_code/start_faster_rcnn.m');
+
+image_full_path = '/home/TestSet/0209_gogo_dataset/GoPro-vedio/part/testcase1/front/011.jpg';
+
+threshold = 0.2;
+rcnn_counter = 1;
+opts=start_faster_rcnn();
+faster_rcnn_test(image_full_path, rcnn_counter, threshold);
+
+
+    
+

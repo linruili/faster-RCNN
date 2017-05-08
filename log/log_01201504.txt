@@ -1,0 +1,266 @@
+fast_rcnn startup done
+GPU 1: free memory 11943755776
+Use GPU 1
+Warning: Specified caffe folder
+(/home/amax/limkuan_files/MachineLearning/final_faster_rcnn/faster_rcnn/external/caffe/matlab/caffe_faster_rcnn)
+is not exist, change to default one
+(/home/amax/limkuan_files/MachineLearning/final_faster_rcnn/faster_rcnn/external/caffe/matlab) 
+> In active_caffe_mex at 19
+  In script_faster_rcnn_VOC2007_VGG16 at 17 
+imdb (voc_2007_trainval): 500/4450
+imdb (voc_2007_trainval): 972/4450
+imdb (voc_2007_trainval): 1424/4450
+imdb (voc_2007_trainval): 1837/4450
+imdb (voc_2007_trainval): 2229/4450
+imdb (voc_2007_trainval): 2616/4450
+imdb (voc_2007_trainval): 3015/4450
+imdb (voc_2007_trainval): 3478/4450
+imdb (voc_2007_trainval): 3851/4450
+imdb (voc_2007_trainval): 4396/4450
+Saving imdb to cache...done
+Loading region proposals...done
+Warrning: no windows proposal is loaded !
+roidb (voc_2007_trainval): 1/2225
+roidb (voc_2007_trainval): 220/2225
+roidb (voc_2007_trainval): 405/2225
+roidb (voc_2007_trainval): 529/2225
+roidb (voc_2007_trainval): 719/2225
+roidb (voc_2007_trainval): 926/2225
+roidb (voc_2007_trainval): 1042/2225
+roidb (voc_2007_trainval): 1238/2225
+roidb (voc_2007_trainval): 1427/2225
+roidb (voc_2007_trainval): 1623/2225
+roidb (voc_2007_trainval): 1838/2225
+roidb (voc_2007_trainval): 2059/2225
+Saving roidb to cache...done
+imdb (voc_2007_test): 1/247
+Saving imdb to cache...done
+Loading region proposals...done
+Warrning: no windows proposal is loaded !
+roidb (voc_2007_test): 53/247
+Saving roidb to cache...done
+Cleared 0 solvers and 1 stand-alone nets
+
+***************
+stage one proposal 
+***************
+conf:
+                      batch_size: 256
+                    bg_thresh_hi: 0.3000
+                    bg_thresh_lo: 0
+                       bg_weight: 1
+         drop_boxes_runoff_image: 1
+                     feat_stride: 16
+                     fg_fraction: 0.5000
+                       fg_thresh: 0.7000
+                     image_means: [1x1x3 single]
+                   ims_per_batch: 1
+                        max_size: 1000
+                        rng_seed: 6
+                          scales: 600
+                  target_only_gt: 1
+                     test_binary: 0
+    test_drop_boxes_runoff_image: 0
+                   test_max_size: 1000
+               test_min_box_size: 16
+                        test_nms: 0.3000
+                     test_scales: 600
+                     use_flipped: 1
+                         use_gpu: 1
+                         anchors: [9x4 double]
+                output_width_map: [901x1 containers.Map]
+               output_height_map: [901x1 containers.Map]
+
+opts:
+           cache_name: 'faster_rcnn_VOC2007_vgg_16layers_stage1_rpn'
+                 conf: [1x1 struct]
+               do_val: 1
+           imdb_train: {[1x1 struct]}
+             imdb_val: [1x1 struct]
+             net_file: '/home/amax/limkuan_files/MachineLearning/final_faster_rcnn/faster_rcnn/...'
+          roidb_train: {[1x1 struct]}
+            roidb_val: [1x1 struct]
+    snapshot_interval: 1000
+      solver_def_file: '/home/amax/limkuan_files/MachineLearning/final_faster_rcnn/faster_rcnn/...'
+         val_interval: 1000
+            val_iters: 40
+
+Preparing training data...Starting parallel pool (parpool) using the 'local' profile ... connected to 12 workers.
+Done.
+Preparing validation data...Done.
+
+------------------------- Iteration 1000 -------------------------
+Training : err_fg 0.315, err_bg 0.0144, loss (cls 0.0889 + reg 0.00729)
+Testing  : err_fg 0.368, err_bg 0.00673, loss (cls 0.0577 + reg 0.00405)
+Saved as /home/amax/limkuan_files/MachineLearning/final_faster_rcnn/faster_rcnn/output/rpn_cachedir/faster_rcnn_VOC2007_vgg_16layers_stage1_rpn/voc_2007_trainval/iter_1000
+
+------------------------- Iteration 2000 -------------------------
+Training : err_fg 0.114, err_bg 0.0115, loss (cls 0.0598 + reg 0.00599)
+Testing  : err_fg 0.0632, err_bg 0.00797, loss (cls 0.041 + reg 0.00302)
+Saved as /home/amax/limkuan_files/MachineLearning/final_faster_rcnn/faster_rcnn/output/rpn_cachedir/faster_rcnn_VOC2007_vgg_16layers_stage1_rpn/voc_2007_trainval/iter_2000
+
+------------------------- Iteration 3000 -------------------------
+Training : err_fg 0.0773, err_bg 0.00819, loss (cls 0.0392 + reg 0.00423)
+Testing  : err_fg 0.0421, err_bg 0.00548, loss (cls 0.0296 + reg 0.00256)
+Saved as /home/amax/limkuan_files/MachineLearning/final_faster_rcnn/faster_rcnn/output/rpn_cachedir/faster_rcnn_VOC2007_vgg_16layers_stage1_rpn/voc_2007_trainval/iter_3000
+
+------------------------- Iteration 4000 -------------------------
+Training : err_fg 0.0637, err_bg 0.00661, loss (cls 0.0321 + reg 0.0039)
+Testing  : err_fg 0.0584, err_bg 0.00383, loss (cls 0.0347 + reg 0.00217)
+Saved as /home/amax/limkuan_files/MachineLearning/final_faster_rcnn/faster_rcnn/output/rpn_cachedir/faster_rcnn_VOC2007_vgg_16layers_stage1_rpn/voc_2007_trainval/iter_4000
+
+------------------------- Iteration 5000 -------------------------
+Training : err_fg 0.0487, err_bg 0.00568, loss (cls 0.0247 + reg 0.00238)
+Testing  : err_fg 0.0762, err_bg 0.00384, loss (cls 0.031 + reg 0.0025)
+Saved as /home/amax/limkuan_files/MachineLearning/final_faster_rcnn/faster_rcnn/output/rpn_cachedir/faster_rcnn_VOC2007_vgg_16layers_stage1_rpn/voc_2007_trainval/iter_5000
+
+------------------------- Iteration 6000 -------------------------
+Training : err_fg 0.0409, err_bg 0.0059, loss (cls 0.0266 + reg 0.0036)
+Testing  : err_fg 0.0498, err_bg 0.00531, loss (cls 0.0277 + reg 0.00307)
+Saved as /home/amax/limkuan_files/MachineLearning/final_faster_rcnn/faster_rcnn/output/rpn_cachedir/faster_rcnn_VOC2007_vgg_16layers_stage1_rpn/voc_2007_trainval/iter_6000
+
+------------------------- Iteration 7000 -------------------------
+Training : err_fg 0.0398, err_bg 0.00494, loss (cls 0.0215 + reg 0.00261)
+Testing  : err_fg 0.0457, err_bg 0.00533, loss (cls 0.0256 + reg 0.00198)
+Saved as /home/amax/limkuan_files/MachineLearning/final_faster_rcnn/faster_rcnn/output/rpn_cachedir/faster_rcnn_VOC2007_vgg_16layers_stage1_rpn/voc_2007_trainval/iter_7000
+
+------------------------- Iteration 8000 -------------------------
+Training : err_fg 0.0371, err_bg 0.00537, loss (cls 0.0234 + reg 0.0031)
+Testing  : err_fg 0.0492, err_bg 0.00327, loss (cls 0.0263 + reg 0.00188)
+Saved as /home/amax/limkuan_files/MachineLearning/final_faster_rcnn/faster_rcnn/output/rpn_cachedir/faster_rcnn_VOC2007_vgg_16layers_stage1_rpn/voc_2007_trainval/iter_8000
+
+------------------------- Iteration 9000 -------------------------
+Training : err_fg 0.0325, err_bg 0.0048, loss (cls 0.0205 + reg 0.00247)
+Testing  : err_fg 0.045, err_bg 0.00442, loss (cls 0.0231 + reg 0.0026)
+Saved as /home/amax/limkuan_files/MachineLearning/final_faster_rcnn/faster_rcnn/output/rpn_cachedir/faster_rcnn_VOC2007_vgg_16layers_stage1_rpn/voc_2007_trainval/iter_9000
+
+------------------------- Iteration 10000 -------------------------
+Training : err_fg 0.0258, err_bg 0.00448, loss (cls 0.0178 + reg 0.00183)
+Testing  : err_fg 0.0517, err_bg 0.00493, loss (cls 0.025 + reg 0.00226)
+Saved as /home/amax/limkuan_files/MachineLearning/final_faster_rcnn/faster_rcnn/output/rpn_cachedir/faster_rcnn_VOC2007_vgg_16layers_stage1_rpn/voc_2007_trainval/iter_10000
+
+------------------------- Iteration 11000 -------------------------
+Training : err_fg 0.0271, err_bg 0.00418, loss (cls 0.0168 + reg 0.00172)
+Testing  : err_fg 0.0161, err_bg 0.00653, loss (cls 0.025 + reg 0.0021)
+Saved as /home/amax/limkuan_files/MachineLearning/final_faster_rcnn/faster_rcnn/output/rpn_cachedir/faster_rcnn_VOC2007_vgg_16layers_stage1_rpn/voc_2007_trainval/iter_11000
+
+------------------------- Iteration 12000 -------------------------
+Training : err_fg 0.0272, err_bg 0.00441, loss (cls 0.0186 + reg 0.00285)
+Testing  : err_fg 0.0627, err_bg 0.00358, loss (cls 0.0351 + reg 0.00217)
+Saved as /home/amax/limkuan_files/MachineLearning/final_faster_rcnn/faster_rcnn/output/rpn_cachedir/faster_rcnn_VOC2007_vgg_16layers_stage1_rpn/voc_2007_trainval/iter_12000
+
+------------------------- Iteration 13000 -------------------------
+Training : err_fg 0.0249, err_bg 0.00412, loss (cls 0.0175 + reg 0.00223)
+Testing  : err_fg 0.0527, err_bg 0.00391, loss (cls 0.0304 + reg 0.00203)
+Saved as /home/amax/limkuan_files/MachineLearning/final_faster_rcnn/faster_rcnn/output/rpn_cachedir/faster_rcnn_VOC2007_vgg_16layers_stage1_rpn/voc_2007_trainval/iter_13000
+
+------------------------- Iteration 14000 -------------------------
+Training : err_fg 0.0258, err_bg 0.0043, loss (cls 0.0164 + reg 0.00189)
+Testing  : err_fg 0.0423, err_bg 0.00426, loss (cls 0.0222 + reg 0.00164)
+Saved as /home/amax/limkuan_files/MachineLearning/final_faster_rcnn/faster_rcnn/output/rpn_cachedir/faster_rcnn_VOC2007_vgg_16layers_stage1_rpn/voc_2007_trainval/iter_14000
+
+------------------------- Iteration 15000 -------------------------
+Training : err_fg 0.0185, err_bg 0.00331, loss (cls 0.0133 + reg 0.00142)
+Testing  : err_fg 0.0589, err_bg 0.0033, loss (cls 0.0313 + reg 0.00173)
+Saved as /home/amax/limkuan_files/MachineLearning/final_faster_rcnn/faster_rcnn/output/rpn_cachedir/faster_rcnn_VOC2007_vgg_16layers_stage1_rpn/voc_2007_trainval/iter_15000
+
+------------------------- Iteration 16000 -------------------------
+Training : err_fg 0.0214, err_bg 0.00371, loss (cls 0.0147 + reg 0.00163)
+Testing  : err_fg 0.0513, err_bg 0.00159, loss (cls 0.0237 + reg 0.00193)
+Saved as /home/amax/limkuan_files/MachineLearning/final_faster_rcnn/faster_rcnn/output/rpn_cachedir/faster_rcnn_VOC2007_vgg_16layers_stage1_rpn/voc_2007_trainval/iter_16000
+
+------------------------- Iteration 17000 -------------------------
+Training : err_fg 0.02, err_bg 0.00377, loss (cls 0.0149 + reg 0.00227)
+Testing  : err_fg 0.0326, err_bg 0.00288, loss (cls 0.0241 + reg 0.00209)
+Saved as /home/amax/limkuan_files/MachineLearning/final_faster_rcnn/faster_rcnn/output/rpn_cachedir/faster_rcnn_VOC2007_vgg_16layers_stage1_rpn/voc_2007_trainval/iter_17000
+
+------------------------- Iteration 18000 -------------------------
+Training : err_fg 0.0184, err_bg 0.00363, loss (cls 0.0137 + reg 0.00198)
+Testing  : err_fg 0.0374, err_bg 0.00348, loss (cls 0.024 + reg 0.00183)
+Saved as /home/amax/limkuan_files/MachineLearning/final_faster_rcnn/faster_rcnn/output/rpn_cachedir/faster_rcnn_VOC2007_vgg_16layers_stage1_rpn/voc_2007_trainval/iter_18000
+
+------------------------- Iteration 19000 -------------------------
+Training : err_fg 0.0124, err_bg 0.00326, loss (cls 0.0121 + reg 0.00157)
+Testing  : err_fg 0.0457, err_bg 0.00354, loss (cls 0.0241 + reg 0.0019)
+Saved as /home/amax/limkuan_files/MachineLearning/final_faster_rcnn/faster_rcnn/output/rpn_cachedir/faster_rcnn_VOC2007_vgg_16layers_stage1_rpn/voc_2007_trainval/iter_19000
+
+------------------------- Iteration 20000 -------------------------
+Training : err_fg 0.0169, err_bg 0.00323, loss (cls 0.0127 + reg 0.00139)
+Testing  : err_fg 0.05, err_bg 0.00324, loss (cls 0.027 + reg 0.00157)
+Saved as /home/amax/limkuan_files/MachineLearning/final_faster_rcnn/faster_rcnn/output/rpn_cachedir/faster_rcnn_VOC2007_vgg_16layers_stage1_rpn/voc_2007_trainval/iter_20000
+
+------------------------- Iteration 21000 -------------------------
+Training : err_fg 0.0144, err_bg 0.00327, loss (cls 0.013 + reg 0.00208)
+Testing  : err_fg 0.046, err_bg 0.00232, loss (cls 0.0277 + reg 0.00171)
+Saved as /home/amax/limkuan_files/MachineLearning/final_faster_rcnn/faster_rcnn/output/rpn_cachedir/faster_rcnn_VOC2007_vgg_16layers_stage1_rpn/voc_2007_trainval/iter_21000
+
+------------------------- Iteration 22000 -------------------------
+Training : err_fg 0.016, err_bg 0.00335, loss (cls 0.0129 + reg 0.00154)
+Testing  : err_fg 0.0504, err_bg 0.00326, loss (cls 0.0254 + reg 0.00178)
+Saved as /home/amax/limkuan_files/MachineLearning/final_faster_rcnn/faster_rcnn/output/rpn_cachedir/faster_rcnn_VOC2007_vgg_16layers_stage1_rpn/voc_2007_trainval/iter_22000
+
+------------------------- Iteration 23000 -------------------------
+Training : err_fg 0.0112, err_bg 0.00291, loss (cls 0.0106 + reg 0.00115)
+Testing  : err_fg 0.0587, err_bg 0.00212, loss (cls 0.0338 + reg 0.00204)
+Saved as /home/amax/limkuan_files/MachineLearning/final_faster_rcnn/faster_rcnn/output/rpn_cachedir/faster_rcnn_VOC2007_vgg_16layers_stage1_rpn/voc_2007_trainval/iter_23000
+
+------------------------- Iteration 24000 -------------------------
+Training : err_fg 0.0113, err_bg 0.00266, loss (cls 0.0101 + reg 0.00129)
+Testing  : err_fg 0.0601, err_bg 0.00177, loss (cls 0.043 + reg 0.00175)
+Saved as /home/amax/limkuan_files/MachineLearning/final_faster_rcnn/faster_rcnn/output/rpn_cachedir/faster_rcnn_VOC2007_vgg_16layers_stage1_rpn/voc_2007_trainval/iter_24000
+
+------------------------- Iteration 25000 -------------------------
+Training : err_fg 0.0159, err_bg 0.00312, loss (cls 0.0127 + reg 0.00202)
+Testing  : err_fg 0.0432, err_bg 0.00357, loss (cls 0.0326 + reg 0.0023)
+Saved as /home/amax/limkuan_files/MachineLearning/final_faster_rcnn/faster_rcnn/output/rpn_cachedir/faster_rcnn_VOC2007_vgg_16layers_stage1_rpn/voc_2007_trainval/iter_25000
+
+------------------------- Iteration 26000 -------------------------
+Training : err_fg 0.0125, err_bg 0.00295, loss (cls 0.0112 + reg 0.0015)
+Testing  : err_fg 0.0284, err_bg 0.00285, loss (cls 0.0201 + reg 0.00193)
+Saved as /home/amax/limkuan_files/MachineLearning/final_faster_rcnn/faster_rcnn/output/rpn_cachedir/faster_rcnn_VOC2007_vgg_16layers_stage1_rpn/voc_2007_trainval/iter_26000
+
+------------------------- Iteration 27000 -------------------------
+Training : err_fg 0.0111, err_bg 0.00274, loss (cls 0.0105 + reg 0.00109)
+Testing  : err_fg 0.0615, err_bg 0.00265, loss (cls 0.0414 + reg 0.00205)
+Saved as /home/amax/limkuan_files/MachineLearning/final_faster_rcnn/faster_rcnn/output/rpn_cachedir/faster_rcnn_VOC2007_vgg_16layers_stage1_rpn/voc_2007_trainval/iter_27000
+
+------------------------- Iteration 28000 -------------------------
+Training : err_fg 0.0107, err_bg 0.00289, loss (cls 0.0115 + reg 0.0014)
+Testing  : err_fg 0.0437, err_bg 0.00232, loss (cls 0.0313 + reg 0.00211)
+Saved as /home/amax/limkuan_files/MachineLearning/final_faster_rcnn/faster_rcnn/output/rpn_cachedir/faster_rcnn_VOC2007_vgg_16layers_stage1_rpn/voc_2007_trainval/iter_28000
+
+------------------------- Iteration 29000 -------------------------
+Training : err_fg 0.00976, err_bg 0.00263, loss (cls 0.00983 + reg 0.00126)
+Testing  : err_fg 0.0744, err_bg 0.00158, loss (cls 0.0367 + reg 0.00195)
+Saved as /home/amax/limkuan_files/MachineLearning/final_faster_rcnn/faster_rcnn/output/rpn_cachedir/faster_rcnn_VOC2007_vgg_16layers_stage1_rpn/voc_2007_trainval/iter_29000
+
+------------------------- Iteration 30000 -------------------------
+Training : err_fg 0.00938, err_bg 0.00249, loss (cls 0.00962 + reg 0.00125)
+Testing  : err_fg 0.0728, err_bg 0.00167, loss (cls 0.0426 + reg 0.00208)
+Saved as /home/amax/limkuan_files/MachineLearning/final_faster_rcnn/faster_rcnn/output/rpn_cachedir/faster_rcnn_VOC2007_vgg_16layers_stage1_rpn/voc_2007_trainval/iter_30000
+
+------------------------- Iteration 31000 -------------------------
+Training : err_fg 0.0125, err_bg 0.0028, loss (cls 0.011 + reg 0.00143)
+Testing  : err_fg 0.0464, err_bg 0.00207, loss (cls 0.0399 + reg 0.00187)
+Saved as /home/amax/limkuan_files/MachineLearning/final_faster_rcnn/faster_rcnn/output/rpn_cachedir/faster_rcnn_VOC2007_vgg_16layers_stage1_rpn/voc_2007_trainval/iter_31000
+Operation terminated by user during caffe.Blob/get_data (line 23)
+
+
+In caffe.Net/get_output (line 128)
+        res(n).data = self.blobs(self.outputs{n}).get_data();
+
+In proposal_train (line 121)
+        rst = caffe_solver.net.get_output();
+
+In Faster_RCNN_Train.do_proposal_train (line 7)
+    model_stage.output_model_file = proposal_train(conf, dataset.imdb_train, dataset.roidb_train,
+    ...
+
+In script_faster_rcnn_VOC2007_VGG16 (line 45)
+model.stage1_rpn            = Faster_RCNN_Train.do_proposal_train(conf_proposal, dataset,
+model.stage1_rpn, opts.do_val);
+ 
+Starting parallel pool (parpool) using the 'local' profile ... connected to 12 workers.
+IdleTimeout has been reached.
+Parallel pool using the 'local' profile is shutting down.
+>> 
