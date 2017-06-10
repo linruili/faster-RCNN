@@ -14,7 +14,7 @@ active_caffe_mex(opts.gpu_id, opts.caffe_version);
 opts.per_nms_topN           = 6000;
 opts.nms_overlap_thres      = 0.7;
 opts.after_nms_topN         = 300;
-opts.use_gpu                = true;
+opts.use_gpu                = false;
 
 opts.test_scales            = 600;
 

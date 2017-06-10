@@ -20,11 +20,11 @@ end
 prob_full_name = sprintf('%s/prob.txt', sub_result_dir);
 prob_file_fid = fopen(prob_full_name, 'w');
 
-img = imread(fullfile(image_full_path));
+im = imread(fullfile(image_full_path));
 result_count = 0;
 
 if opts.use_gpu
-    im = gpuArray(img);
+    im = gpuArray(im);
 end
 
 % test proposal
@@ -72,7 +72,7 @@ box_info = boxes_cell{1, 1}(:, 1:4);
 box_info = [box_info(:, 1:2), box_info(:, 3) - box_info(:, 1), ...
     box_info(:, 4) - box_info(:, 2)];
 for i = 1:size(box_info, 1)
-    crop_img = imcrop(img, box_info(i, :));
+    crop_img = imcrop(im, box_info(i, :));
     region_full_name = sprintf('%s/%02d.jpg', sub_result_dir, result_count);
     imwrite(crop_img, region_full_name);
     fprintf(prob_file_fid, '%s %s %f %f %f %f %f\n', im_name, ...
