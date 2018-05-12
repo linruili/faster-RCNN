@@ -9,6 +9,7 @@ pause(1);
 threshold = 0.2;
 [opts, proposal_detection_model, rpn_net, fast_rcnn_net] = start_faster_rcnn();
 
+fprintf('start rcnn');
 while(true)
     while(t.BytesAvailable==0)
         pause(0.01);

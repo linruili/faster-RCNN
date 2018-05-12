@@ -8,13 +8,14 @@ cd('/home/HAVIL/faster_rcnn/');
 run(fullfile(fileparts(fileparts(mfilename('fullpath'))), 'startup'));
 %% -------------------- CONFIG --------------------
 opts.caffe_version          = 'caffe_faster_rcnn';
-opts.gpu_id                 = auto_select_gpu;
+opts.gpu_id                 = 2;
+%opts.gpu_id                 = auto_select_gpu;
 active_caffe_mex(opts.gpu_id, opts.caffe_version);
 
 opts.per_nms_topN           = 6000;
 opts.nms_overlap_thres      = 0.7;
 opts.after_nms_topN         = 300;
-opts.use_gpu                = false;
+opts.use_gpu                = true;
 
 opts.test_scales            = 600;
 
